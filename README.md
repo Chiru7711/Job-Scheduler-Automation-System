@@ -2,6 +2,12 @@
 
 A mini job scheduling and automation system built for Dotix Technologies.
 
+## 🌐 Live Demo
+
+- **Frontend**: https://job-scheduler-automation-system-lub.vercel.app/
+- **Backend API**: https://job-scheduler-automation-system.onrender.com/
+- **Health Check**: https://job-scheduler-automation-system.onrender.com/health
+
 ## 🛠️ Tech Stack
 
 - **Frontend**: Next.js + TypeScript + Tailwind CSS + Shadcn UI
@@ -17,6 +23,8 @@ A mini job scheduling and automation system built for Dotix Technologies.
 - ✅ Run jobs manually with real-time status updates
 - ✅ Automatic webhook triggers on job completion
 - ✅ Clean, responsive UI with Tailwind CSS
+- ✅ Full TypeScript implementation
+- ✅ Production deployment on Vercel & Render
 
 ## 📁 Project Structure
 
@@ -50,15 +58,36 @@ npm run dev
 3. Update `backend/.env` file with your webhook URL
 
 ### 4. Access the Application
-- Frontend: http://localhost:3000
-- Backend API: http://localhost:3001
-- Health Check: http://localhost:3001/health
+- **Live Demo**: https://job-scheduler-automation-system-lub.vercel.app/
+- **Local Frontend**: http://localhost:3000
+- **Local Backend**: http://localhost:3001
+- **Health Check**: http://localhost:3001/health
+
+## 🌐 Production Deployment
+
+### Live Application
+- **Frontend (Vercel)**: https://job-scheduler-automation-system-lub.vercel.app/
+- **Backend (Render)**: https://job-scheduler-automation-system.onrender.com/
+
+### Test the System
+1. Visit the live demo link above
+2. Create a job using the form (left side)
+3. Watch it appear in the jobs table (right side)
+4. Click "Run Job" to execute it
+5. See status change: pending → running → completed
+6. Webhook notifications are sent automatically
 
 ## 🤖 AI Usage Documentation
 
-**AI Tools Used**: [To be documented during development]
-**Models**: [To be documented]
-**Prompts**: [To be documented]
+**AI Tools Used**: Claude 3.5 Sonnet (Anthropic)
+**Models**: Claude 3.5 Sonnet
+**Prompts**: Used for code generation, debugging, and deployment configuration
+**AI Assistance**: 
+- Backend API development and TypeScript configuration
+- Frontend React components and styling
+- Database schema design with Prisma
+- Deployment troubleshooting for Render and Vercel
+- Error resolution and type safety improvements
 
 ## 📊 Database Schema
 

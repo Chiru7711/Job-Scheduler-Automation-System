@@ -99,7 +99,7 @@ export class JobService {
         message: `Job '${job.taskName}' completed successfully`
       };
 
-      const response = await axios.post(webhookUrl, notificationData, {
+      await axios.post(webhookUrl, notificationData, {
         timeout: 5000,
         headers: {
           'Content-Type': 'application/json'
@@ -107,7 +107,7 @@ export class JobService {
       });
 
       console.log(`✅ Webhook sent successfully for job ${job.id}`);
-    } catch (error) {
+    } catch (error: any) {
       console.error(`❌ Failed to send webhook for job ${job.id}:`, error.message);
     }
   }

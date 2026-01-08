@@ -16,7 +16,7 @@ export const jobService = {
     return response.data;
   },
 
-  async getJobs(filters: JobFilters = {}): Promise<Job[]> {
+  async getJobs(filters: JobFilters = { status: '', priority: '' }): Promise<Job[]> {
     const params = new URLSearchParams();
     if (filters.status) params.append('status', filters.status);
     if (filters.priority) params.append('priority', filters.priority);

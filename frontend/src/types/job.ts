@@ -16,6 +16,6 @@ export interface CreateJobData {
 }
 
 export interface JobFilters {
-  status?: string;
-  priority?: string;
+  status: string;
+  priority: string;
 }

@@ -13,6 +13,18 @@ app.use(express.json());
 
 app.use('/api', jobRoutes);
 
+app.get('/', (req, res) => {
+  res.json({ 
+    message: 'Job Scheduler API is running',
+    endpoints: {
+      health: '/health',
+      jobs: '/api/jobs',
+      createJob: 'POST /api/jobs',
+      runJob: 'POST /api/run-job/:id'
+    }
+  });
+});
+
 app.get('/health', (req, res) => {
   res.json({ status: 'OK', message: 'Job Scheduler API is running' });
 });

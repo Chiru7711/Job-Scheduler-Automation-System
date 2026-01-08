@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Job {
+  id          Int      @id @default(autoincrement())
+  taskName    String
+  payload     String   // JSON string
+  priority    String   // Low, Medium, High
+  status      String   @default("pending") // pending, running, completed
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  completedAt DateTime?
+
+  @@map("jobs")
+}
